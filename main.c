@@ -14,6 +14,8 @@ void tampilkanPertanyaan(const char *pertanyaan, const char *opsiA, const char *
     printf("==========================================\n");
 }
 
+// menu quiz
+
 int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
 {
       if (BanyakArgumen != 3)
@@ -99,6 +101,8 @@ int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
     if (strcmp(usernameinput, username) == 0 && strcmp(usernameinput, username) == 0)
     {
         printf("Login Berhasil!\n");
+        
+        // tarok fungsi menu quiz
     }
     else // gagal login
     {
