@@ -16,25 +16,26 @@ void tampilkanPertanyaan(const char *pertanyaan, const char *opsiA, const char *
 
 int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
 {
-    if (BanyakArgumen != 3)
+      if (BanyakArgumen != 3)
     {
-        printf("Gagal login!");
-        printf("\n Cara penggunaan : ./(namafile) username password");
+
+        printf("\n Cara penggunaan : ./(namafile) username password\n");
+
         return EXIT_FAILURE;
     }
-    char usernameinput[20], passwordinput[20];
-    strncpy(usernameinput, argumen[1], sizeof(usernameinput) - 1);
-    strncpy(passwordinput, argumen[2], sizeof(passwordinput) - 1);
 
-    usernameinput[sizeof(usernameinput) - 1] = '\0';
-    passwordinput[sizeof(passwordinput) - 1] = '\0';
+    char usernameinput[10], passwordinput[10];
+    strcpy(usernameinput, argumen[1]);
+    strcpy(passwordinput, argumen[2]);
 
+    // buka dan baca file binary : login.bin
     FILE *fpr = fopen("database/login.bin", "rb");
+    char akun[20];
 
     if (fpr == NULL)
     {
         printf("Gagal membuka file.\n");
-        return EXIT_FAILURE;
+        return 1;
     }
 
     // Cek apakah file kosong
@@ -45,9 +46,9 @@ int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
         printf("\tGagal login, Silahkan registrasi terlebih dahulu!\n");
         printf("================================================================\n");
 
+        // membuka file binary untuk memasukan data registrasi
         FILE *fpw = fopen("database/login.bin", "wb");
         char id[20];
-        
         char pw[20];
         printf("Registrasi\n");
         printf("Masukan id: ");
@@ -55,41 +56,59 @@ int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
 
         printf("Masukan pw: ");
         scanf("%s", pw);
+        fprintf(fpw, "%s", id);
 
-        fprintf(fpw, "%s ", id);
+        fprintf(fpw, " ");
         fprintf(fpw, "%s", pw);
+
+        fprintf(fpw, "\0"); // Menambahkan karakter nul di akhir data
+
         fclose(fpw);
 
         return EXIT_FAILURE;
     }
 
-    rewind(fpr);
-
-    char akun[40];
-    if (fread(akun, sizeof(akun), 1, fpr) != 1)
+    if ((fpr = fopen("database/login.bin", "rb")) == NULL)
     {
-        printf("Gagal membaca data dari file!\n");
-        fclose(fpr);
+        printf("Gagal membuka file!");
+
         return EXIT_FAILURE;
     }
 
+    // membaca file binary dan ditampunf di variable akun
+    fread(akun, sizeof(char), sizeof(akun) / sizeof(char), fpr);
+
     fclose(fpr);
 
-    char *username, *password;
-    username = strtok(akun, " ");
-    password = strtok(NULL, " ");
+    char *string[3];
+    char username[20], password[20];
+    int ctrl = 0;
 
-    if (username != NULL && password != NULL && strcmp(usernameinput, username) == 0 && strcmp(passwordinput, password) == 0)
+    string[0] = strtok(akun, " ");
+
+    // memisahkan kata perkata menggunakan fungsi strtok
+    while (string[ctrl++] != NULL)
+    {
+        string[ctrl] = strtok(NULL, " ");
+    }
+
+    strcpy(username, string[0]);
+    strcpy(password, string[1]);
+
+    // memulai quiz ketika login berhasil
+    if (strcmp(usernameinput, username) == 0 && strcmp(usernameinput, username) == 0)
     {
         printf("Login Berhasil!\n");
-        menu();
     }
-    else
+    else // gagal login
     {
-        printf("Password Salah!\n");
-        printf("Gagal login!\n");
-        printf("Username: %s\n", username);
-        printf("Password: %s\n", password);
+        printf("PW SALAH!\n");
+
+        printf("Riwayat Akun!\n");
+        printf("Username %s\n", username);
+        printf("Password %s\n", password);
+        printf("%s ", argumen[1]);
+        printf("%s", argumen[2]);
     }
 
     return 0;
