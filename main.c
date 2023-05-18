@@ -185,6 +185,7 @@ int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
         printf("Login Berhasil!\n");
         
         // tarok fungsi menu quiz
+        quiz();
     }
     else // gagal login
     {
