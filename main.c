@@ -79,8 +79,22 @@ void kuiz() // fungsi menu untuk quiz
         printf("Jawaban Anda salah!\n");
     }
     printf("==========================================\n");
-
-
+    
+    // 5
+    pertanyaan("Nama siapa yang terkenal dalam dunia musik Indonesia dengan lagu 'Pergi Pagi Pulang Pagi'?", "Raisa", "Tulus", "Judika", "Armada");
+    printf("Jawaban Anda (A/B/C/D): ");
+    scanf("%s", jawaban);
+    if (strcmp(jawaban, "D") == 0 || strcmp(jawaban, "d") == 0)
+    {
+        skor += 100;
+        printf("Jawaban Anda benar!\n");
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+    printf("==========================================\n");
+    printf("Skor Anda: %d\n", skor);
 }
 
 
