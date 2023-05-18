@@ -2,6 +2,18 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+void tampilkanPertanyaan(const char *pertanyaan, const char *opsiA, const char *opsiB, const char *opsiC, const char *opsiD)
+{
+    printf("==========================================\n");
+    printf("%s\n", pertanyaan);
+    printf("A. %s\n", opsiA);
+    printf("B. %s\n", opsiB);
+    printf("C. %s\n", opsiC);
+    printf("D. %s\n", opsiD);
+    printf("==========================================\n");
+}
+
 int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
 {
     if (BanyakArgumen != 3)
