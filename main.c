@@ -181,10 +181,9 @@ int main(int BanyakArgumen, char *argumen[])
     {
         printf("Login Berhasil!\n");
         kuiz();
-        
         FILE *file;
 
-        file = fopen("database/login.bin", "wb"); // Mode "wb" digunakan untuk menulis pada file biner (overwrite) (menghapus file login.bin)
+        file = fopen("database/login.bin", "wb"); // Mode "wb" digunakan untuk menulis pada file biner (overwrite) (menghapus file text di login.bin)
 
         if (file == NULL)
         {
