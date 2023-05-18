@@ -13,3 +13,17 @@ Email : syahirasitiannisa@gmail.com
 4. Naila Ghina (2208101010089)
 Email :nailaghinarania11@gmail.com
 
+Pesan dan Kesan :
+Halo bang adit dan kak sofia
+
+Saya ingin mengucapkan terima kasih banyak untu semua atas bimbingan sampai dengan hari ini. Saya ingin mengucapkan terimakasih banyak atas kesabaran dan kebaikan kakak dan abg selama ini. Selain itu, kakak dan abag juga selalu siap membantu menjawab pertanyaan kami dan memberikan arahan yang jelas.
+
+Saya ingin mengungkapkan apresiasi khusus kepada abang dan kakak karena kebaikan hati dan kepedulian Anda terhadap perkembangan kami sebagai mahasiswa. 
+
+Terima kasih atas semangat kakak dan abang dalam mengajar kami dan membantu kami . Semoga kakak dan abang terus sukses dan bahagia dalam karir abang dan akak . Kami beruntung memiliki seorang Aslab seperti bang adit dan kak sofia.
+
+Salam hangat,
+[Anggiya Mahara]
+
+Bismillah 100
+
