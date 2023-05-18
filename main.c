@@ -35,7 +35,7 @@ void kuiz() // fungsi menu untuk quiz
     }
     printf("==========================================\n");
     
-    // Pertanyaan 2
+    // 2
     pertanyaan("Berapa jumlah provinsi di Indonesia saat ini?", "30", "32", "34", "36");
     printf("Jawaban Anda (A/B/C/D): ");
     scanf("%s", jawaban);
@@ -49,6 +49,23 @@ void kuiz() // fungsi menu untuk quiz
         printf("Jawaban Anda salah!\n");
     }
     printf("==========================================\n");
+    
+    // 3
+    pertanyaan("Apa ibu kota Indonesia?", "Jakarta", "Bandung", "Surabaya", "Yogyakarta");
+    printf("Jawaban Anda (A/B/C/D): ");
+    scanf("%s", jawaban);
+    if (strcmp(jawaban, "A") == 0 || strcmp(jawaban, "a") == 0)
+    {
+        skor += 150;
+        printf("Jawaban Anda benar!\n");
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+    printf("==========================================\n");
+
+
 }
 
 
