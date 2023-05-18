@@ -34,6 +34,21 @@ void kuiz() // fungsi menu untuk quiz
         printf("Jawaban Anda salah!\n");
     }
     printf("==========================================\n");
+    
+    // Pertanyaan 2
+    pertanyaan("Berapa jumlah provinsi di Indonesia saat ini?", "30", "32", "34", "36");
+    printf("Jawaban Anda (A/B/C/D): ");
+    scanf("%s", jawaban);
+    if (strcmp(jawaban, "C") == 0 || strcmp(jawaban, "c") == 0)
+    {
+        skor += 120;
+        printf("Jawaban Anda benar!\n");
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+    printf("==========================================\n");
 }
 
 
