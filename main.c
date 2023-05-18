@@ -15,6 +15,27 @@ void tampilkanPertanyaan(const char *pertanyaan, const char *opsiA, const char *
 }
 
 // menu quiz
+void kuiz() // fungsi menu untuk quiz
+{
+    char jawaban[10];
+    int skor = 0;
+
+    // 1
+    pertanyaan("Siapa penulis novel \"Laskar Pelangi\"?", "Andrea Hirata", "Andrea Hirata", "Dee Lestari", "Raditya Dika");
+    printf("Jawaban Anda (A/B/C/D): ");
+    scanf("%s", jawaban);
+    if (strcmp(jawaban, "A") == 0 || strcmp(jawaban, "a") == 0)
+    {
+        skor += 100;
+        printf("Jawaban Anda benar!\n");
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+    printf("==========================================\n");
+}
+
 
 int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
 {
