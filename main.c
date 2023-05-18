@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-void tampilkanPertanyaan(const char *pertanyaan, const char *opsiA, const char *opsiB, const char *opsiC, const char *opsiD)
+void pertanyaan(const char *pertanyaan, const char *opsiA, const char *opsiB, const char *opsiC, const char *opsiD) // fungsi untuk kuiz pertanyaan
 {
     printf("==========================================\n");
     printf("%s\n", pertanyaan);
@@ -14,13 +13,12 @@ void tampilkanPertanyaan(const char *pertanyaan, const char *opsiA, const char *
     printf("==========================================\n");
 }
 
-// menu quiz
 void kuiz() // fungsi menu untuk quiz
 {
     char jawaban[10];
     int skor = 0;
 
-    // 1
+    // Pertanyaan 1
     pertanyaan("Siapa penulis novel \"Laskar Pelangi\"?", "Andrea Hirata", "Andrea Hirata", "Dee Lestari", "Raditya Dika");
     printf("Jawaban Anda (A/B/C/D): ");
     scanf("%s", jawaban);
@@ -34,14 +32,14 @@ void kuiz() // fungsi menu untuk quiz
         printf("Jawaban Anda salah!\n");
     }
     printf("==========================================\n");
-    
-    // 2
+
+    // Pertanyaan 2
     pertanyaan("Berapa jumlah provinsi di Indonesia saat ini?", "30", "32", "34", "36");
     printf("Jawaban Anda (A/B/C/D): ");
     scanf("%s", jawaban);
     if (strcmp(jawaban, "C") == 0 || strcmp(jawaban, "c") == 0)
     {
-        skor += 120;
+        skor += 100;
         printf("Jawaban Anda benar!\n");
     }
     else
@@ -49,14 +47,14 @@ void kuiz() // fungsi menu untuk quiz
         printf("Jawaban Anda salah!\n");
     }
     printf("==========================================\n");
-    
-    // 3
+
+    // Pertanyaan 3
     pertanyaan("Apa ibu kota Indonesia?", "Jakarta", "Bandung", "Surabaya", "Yogyakarta");
     printf("Jawaban Anda (A/B/C/D): ");
     scanf("%s", jawaban);
     if (strcmp(jawaban, "A") == 0 || strcmp(jawaban, "a") == 0)
     {
-        skor += 150;
+        skor += 100;
         printf("Jawaban Anda benar!\n");
     }
     else
@@ -64,8 +62,8 @@ void kuiz() // fungsi menu untuk quiz
         printf("Jawaban Anda salah!\n");
     }
     printf("==========================================\n");
-    
-    // 4
+
+    // Pertanyaan 4
     pertanyaan("Apa nama mata uang resmi Indonesia?", "Rupiah", "Dinar", "Euro", "Yen");
     printf("Jawaban Anda (A/B/C/D): ");
     scanf("%s", jawaban);
@@ -79,8 +77,8 @@ void kuiz() // fungsi menu untuk quiz
         printf("Jawaban Anda salah!\n");
     }
     printf("==========================================\n");
-    
-    // 5
+
+    // Pertanyaan 5
     pertanyaan("Nama siapa yang terkenal dalam dunia musik Indonesia dengan lagu 'Pergi Pagi Pulang Pagi'?", "Raisa", "Tulus", "Judika", "Armada");
     printf("Jawaban Anda (A/B/C/D): ");
     scanf("%s", jawaban);
@@ -97,10 +95,9 @@ void kuiz() // fungsi menu untuk quiz
     printf("Skor Anda: %d\n", skor);
 }
 
-
-int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
+int main(int BanyakArgumen, char *argumen[])
 {
-      if (BanyakArgumen != 3)
+    if (BanyakArgumen != 3)
     {
 
         printf("\n Cara penggunaan : ./(namafile) username password\n");
@@ -183,9 +180,7 @@ int main(int BanyakArgumen, char *argumen[]) // ./main username passwword
     if (strcmp(usernameinput, username) == 0 && strcmp(usernameinput, username) == 0)
     {
         printf("Login Berhasil!\n");
-        
-        // tarok fungsi menu quiz
-        quiz();
+        kuiz();
     }
     else // gagal login
     {
