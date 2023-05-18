@@ -64,6 +64,21 @@ void kuiz() // fungsi menu untuk quiz
         printf("Jawaban Anda salah!\n");
     }
     printf("==========================================\n");
+    
+    // 4
+    pertanyaan("Apa nama mata uang resmi Indonesia?", "Rupiah", "Dinar", "Euro", "Yen");
+    printf("Jawaban Anda (A/B/C/D): ");
+    scanf("%s", jawaban);
+    if (strcmp(jawaban, "A") == 0 || strcmp(jawaban, "a") == 0)
+    {
+        skor += 100;
+        printf("Jawaban Anda benar!\n");
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+    printf("==========================================\n");
 
 
 }
