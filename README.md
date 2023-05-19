@@ -49,6 +49,17 @@ Salam
 
 
 
+Kesan : Awalnya mikir kalo kak sofia tu kalem, terlalu chill bener.. Terus bg Adit yg cool kayak kulkas, tapi mengayomi banget hahah
+
+Pesan : gak ada pesan buat kak sofia. Kalau buat bg Adit, ayo senantiasa humble, jangan lagi kayak kulkas 12 pintu 
+
+
+Salam 
+[Sarirati]
+
+
+
+
 
 
 
