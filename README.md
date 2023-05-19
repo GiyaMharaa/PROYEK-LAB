@@ -27,3 +27,16 @@ Salam hangat,
 
 Bismillah 100
 
+
+
+Kak sofia: kesan, kakak sangat baik, friendly sama kami semua, dan pokoknya kakak sangat best kali
+Pesan, semoga menjadi aslab yang lebih baik
+
+Bg adit: kesan, bg adit sangat baik, dan ramah sama kami semua.
+Pesan, semoga menjadi aslab yang lebih baik
+
+Salam 
+[Siti Annisa Syahira]
+
+
+
