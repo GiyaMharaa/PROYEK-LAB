@@ -40,3 +40,16 @@ Salam
 
 
 
+
+Terima kasih kak udh ngajarin kmi, sabar dgn tingkah kmi yang aneh, tidak memberi tugas terlalu banyak hehehe, makasih kak, 
+
+Salam 
+[Naila Ghina Rania]
+
+
+
+
+
+
+
+
